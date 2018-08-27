@@ -1,0 +1,208 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    
+            <!-- 体动日分析报告表格 -->
+    <dimen name="table_text_size">15dp</dimen>
+    <dimen name="table_item1_width">10dp</dimen>
+    <dimen name="table_item2_width">10dp</dimen>
+    <dimen name="table_item3_width">10dp</dimen>
+    <dimen name="table_item4_width">10dp</dimen>
+    <!-- 体动周分析报告表格 -->
+ 
+    <dimen name="table_text_size1">13dp</dimen>
+    
+    
+    
+    
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="list_head_height">75dip</dimen>
+    <dimen name="cache_height">70dip</dimen>
+    <dimen name="page_title_height">55dip</dimen>
+     <dimen name="page_title_height1">60dip</dimen>
+    <dimen name="tool_bar_height">35dip</dimen>
+    <dimen name="list_button_height">48dip</dimen>
+    <dimen name="loading_pixel">140dip</dimen>
+    <dimen name="photo_width">110dip</dimen>
+    <dimen name="popmenu_width">120dip</dimen>
+    <dimen name="popmenu_height">200dip</dimen>
+    <dimen name="popmenu_xoff">5dip</dimen>
+    <dimen name="popmenu_yoff">2dip</dimen>
+    <dimen name="circle_size">170dip</dimen>
+    <dimen name="radio_height">30dip</dimen>
+    <dimen name="sugar_mark_height">110dip</dimen>
+    <dimen name="sugar_effect_height">80dip</dimen>
+    <dimen name="target_width">40dip</dimen>
+    <dimen name="target_height">90dip</dimen>
+    <dimen name="indicate_target_height">110dip</dimen>
+    <dimen name="target_input_width">140dip</dimen>
+    <dimen name="target_right_margin">120dip</dimen>
+    <dimen name="target_height_margin">89dip</dimen>
+    <dimen name="indicate_height_margin">109dip</dimen>
+    <dimen name="target_input_margin">69.5dip</dimen>
+    <dimen name="indicate_input_margin">89.5dip</dimen>
+    <dimen name="target_input_margin1">50dip</dimen>
+    <dimen name="indicate_input_margin1">70dip</dimen>
+    <dimen name="target_input_margin2">50.5dip</dimen>
+    <dimen name="chart_min_height">200dip</dimen>
+    
+    <dimen name="horizon_off_set">-55dip</dimen>
+    <dimen name="sugar_add_center">70dip</dimen>
+    <dimen name="equip_width">60dip</dimen>
+    <dimen name="center_value_height">120dip</dimen>
+    
+    <dimen name="plug_width">90dip</dimen>
+    <dimen name="plug_icon_width">40dip</dimen>
+    <dimen name="plug_entry_width">30dip</dimen>
+    <dimen name="dialog_btn_height">50dip</dimen>
+    <dimen name="value_widget">50dip</dimen>
+    
+    <dimen name="main_item_bg">80dip</dimen>
+    <dimen name="stock_width">25dip</dimen>
+    <dimen name="simple_stock_width">14dip</dimen>
+    <dimen name="cache_title_height">90dip</dimen>
+    <dimen name="dimen_date_height">35dip</dimen>
+    <dimen name="dimen_date_height_margin">-30dip</dimen>
+    <dimen name="toolbar">30dip</dimen>
+    <dimen name="clock_width">30dip</dimen>
+    <dimen name="one_top_height">110dip</dimen>
+    <dimen name="simple_circle_size">175dip</dimen>
+    <dimen name="news_img_width">110dip</dimen>
+    <dimen name="news_img_height">80dip</dimen>
+    <dimen name="indicator_width">90dip</dimen>
+    
+    <dimen name="member_width">60dip</dimen>
+    
+    <dimen name="assess_height">40dip</dimen>
+    <dimen name="assess_item_height">15dip</dimen>
+    <dimen name="assess_item_width">40dip</dimen>
+    <dimen name="assess_padding">5dip</dimen>
+    <dimen name="page_sub_title_height">40dip</dimen>
+    
+    <dimen name="matrix_width">67dip</dimen>
+    <dimen name="usercenter_photo_width">75dip</dimen>
+    <dimen name="help_item">48dip</dimen>
+    
+    <!-- 字体大小 -->
+    <dimen name="text_size_10">10dip</dimen>
+    <dimen name="text_size_12">12dip</dimen>
+    <dimen name="text_size_13">13dip</dimen>
+    <dimen name="text_size_14">14dip</dimen>
+    <dimen name="text_size_15">15dip</dimen>
+    <dimen name="text_size_16">16dip</dimen>
+    <dimen name="text_size_18">18dip</dimen>
+
+    <!-- 享睡 -->
+    <dimen name="MarginTop_line_exception">130.0dip</dimen>
+    <dimen name="PadLeft_graph">2.0dip</dimen>
+    <dimen name="PadRight_graph">10.0dip</dimen>
+    <dimen name="Title_1">17.0sp</dimen>
+    <dimen name="Title_2">16.0sp</dimen>
+    <dimen name="Title_3">15.0sp</dimen>
+    <dimen name="Title_4">14.0sp</dimen>
+    <dimen name="Title_5">13.0sp</dimen>
+    <dimen name="Title_6">12.0sp</dimen>
+    <dimen name="Title_7">10.0sp</dimen>
+    <dimen name="activity_margin">17.0dip</dimen>
+    <dimen name="afternoonringview_height">60.0dip</dimen>
+    <dimen name="album_icon_corners">2.0dip</dimen>
+    <dimen name="album_icon_size">50.0dip</dimen>
+    <dimen name="album_item_height">70.0dip</dimen>
+    <dimen name="alphabet_size">12.0dip</dimen>
+    <dimen name="cardview_compat_inset_shadow">1.0dip</dimen>
+    <dimen name="cardview_default_elevation">2.0dip</dimen>
+    <dimen name="cardview_default_radius">2.0dip</dimen>
+    <dimen name="cell_heigh">39.0dip</dimen>
+    <dimen name="cell_margin_left">10.0dip</dimen>
+    <dimen name="cell_margin_top">0.0dip</dimen>
+    <dimen name="cell_text_size">15.0sp</dimen>
+    <dimen name="cell_text_size_ja">14.0sp</dimen>
+    <dimen name="cell_width">39.0dip</dimen>
+    <dimen name="circle_36">36.0sp</dimen>
+    <dimen name="color_pointer_halo_radius">18.0dip</dimen>
+    <dimen name="color_wheel_radius">248.0dip</dimen>
+    <dimen name="color_wheel_thickness">21.0dip</dimen>
+    <dimen name="com_facebook_likeboxcountview_border_radius">3.0dip</dimen>
+    <dimen name="com_facebook_likeboxcountview_border_width">1.0dip</dimen>
+    <dimen name="com_facebook_likeboxcountview_caret_height">3.0dip</dimen>
+    <dimen name="com_facebook_likeboxcountview_caret_width">6.0dip</dimen>
+    <dimen name="com_facebook_likeboxcountview_text_padding">6.0dip</dimen>
+    <dimen name="com_facebook_likeboxcountview_text_size">11.0sp</dimen>
+    <dimen name="com_facebook_likeview_edge_padding">2.0dip</dimen>
+    <dimen name="com_facebook_likeview_internal_padding">6.0dip</dimen>
+    <dimen name="com_facebook_likeview_text_size">11.0sp</dimen>
+    <dimen name="com_facebook_profilepictureview_preset_size_large">180.0dip</dimen>
+    <dimen name="com_facebook_profilepictureview_preset_size_normal">100.0dip</dimen>
+    <dimen name="com_facebook_profilepictureview_preset_size_small">50.0dip</dimen>
+    <dimen name="com_facebook_share_button_compound_drawable_padding">12.0dip</dimen>
+    <dimen name="com_facebook_share_button_padding_bottom">12.0dip</dimen>
+    <dimen name="com_facebook_share_button_padding_left">12.0dip</dimen>
+    <dimen name="com_facebook_share_button_padding_right">16.0dip</dimen>
+    <dimen name="com_facebook_share_button_padding_top">12.0dip</dimen>
+    <dimen name="com_facebook_share_button_text_size">16.0sp</dimen>
+    <dimen name="com_facebook_tooltip_horizontal_padding">10.0dip</dimen>
+    <dimen name="comment_below_img_pad">10.0dip</dimen>
+    <dimen name="comment_below_img_txt_pad">0.0dip</dimen>
+    <dimen name="comment_fontsize">18.0sp</dimen>
+    <dimen name="compare_padleft">8.0dip</dimen>
+    <dimen name="course_detail_item">60.0dip</dimen>
+    <dimen name="day_report_img_txx_pad">5.0dip</dimen>
+    <dimen name="day_report_margin">5.0dip</dimen>
+    <dimen name="device_list_height">80.0dip</dimen>
+    <dimen name="dialog_btn_font_size">19.0sp</dimen>
+    <dimen name="dialog_content_font_size">16.0sp</dimen>
+    <dimen name="dialog_content_left">15.0dip</dimen>
+    <dimen name="dialog_corner">4.0dip</dimen>
+    <dimen name="dialog_margin">22.0dip</dimen>
+    <dimen name="dialog_margin_bottom">30.0dip</dimen>
+    <dimen name="dialog_title_font_size">19.0sp</dimen>
+    <dimen name="discovery_padding">1.0dip</dimen>
+    <dimen name="dp10">10.0dip</dimen>
+    <dimen name="dp20">20.0dip</dimen>
+    <dimen name="dp8">8.0dip</dimen>
+    <dimen name="envir_icon_value_space">6.0dip</dimen>
+    <dimen name="envir_value_unit_space">2.0dip</dimen>
+    <dimen name="fontSize_detail_scale_label">13.0sp</dimen>
+    <dimen name="fontSize_detail_scale_unit">16.0sp</dimen>
+    <dimen name="fontSize_detail_scale_value">24.0sp</dimen>
+    <dimen name="fontSize_report_item_label">11.0sp</dimen>
+    <dimen name="fontSize_report_item_unit">10.0sp</dimen>
+    <dimen name="fontsize_create_account_input">15.0sp</dimen>
+    <dimen name="fontsize_month_sleep_level">10.0sp</dimen>
+    <dimen name="fontsize_report_value_size">20.0sp</dimen>
+    <dimen name="fragment_margin">15.0dip</dimen>
+    <dimen name="header_height">44.0dip</dimen>
+    <dimen name="header_title_size">20.0sp</dimen>
+    <dimen name="height_report_item_data">55.0dip</dimen>
+    <dimen name="height_report_item_data2">100.0dip</dimen>
+    <dimen name="item_touch_helper_max_drag_scroll_per_frame">20.0dip</dimen>
+    <dimen name="item_touch_helper_swipe_escape_max_velocity">800.0dip</dimen>
+    <dimen name="item_touch_helper_swipe_escape_velocity">120.0dip</dimen>
+    <dimen name="list_setting_item_height">60.0dip</dimen>
+    <dimen name="margin_score_anysis">15.0dip</dimen>
+    <dimen name="menu_item_height">53.0dip</dimen>
+    <dimen name="monitor_device_icon_margin">7.0dip</dimen>
+    <dimen name="monthbrowse_hint_pading">3.0dip</dimen>
+    <dimen name="pad_detal_scale_point">8.0dip</dimen>
+    <dimen name="pad_detal_scale_value">12.0dip</dimen>
+    <dimen name="recommend_padding">3.0dip</dimen>
+    <dimen name="scene_item_corner">6.0dip</dimen>
+    <dimen name="scene_item_normal">150.0dip</dimen>
+    <dimen name="scene_item_select">170.0dip</dimen>
+    <dimen name="score_bar_size">225.0dip</dimen>
+    <dimen name="setting_item_height">50.0dip</dimen>
+    <dimen name="sleephelper_item_height">56.0dip</dimen>
+    <dimen name="swiper_listview_menu_width">70.0dip</dimen>
+    <dimen name="umeng_socialize_pad_window_height">350.0dip</dimen>
+    <dimen name="umeng_socialize_pad_window_width">580.0dip</dimen>
+    <dimen name="view_line_05">0.5dip</dimen>
+    <dimen name="week_left_margin">0.0dip</dimen>
+    <dimen name="week_report_item_graph_height">160.0dip</dimen>
+    <dimen name="week_reprot_icon_padding_right">13.0dip</dimen>
+    <dimen name="week_top_margin">0.0dip</dimen>
+    <dimen name="width_report_tongJi_leftText_Length">70.0dip</dimen>
+    <dimen name="width_report_view_item_unit">40.0dip</dimen>
+    <dimen name="ximalay_category_padding">10.0dip</dimen>
+    
+</resources>
