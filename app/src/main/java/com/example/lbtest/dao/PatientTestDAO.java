@@ -46,7 +46,7 @@ public class PatientTestDAO {
 
         ContentValues cv = new ContentValues();
         cv.put(PATIENT_FIRST,patienttest.getFirst());
-        //System.out.println("失败了？？？？？");
+        System.out.println("失败了？？？？？"+patienttest.getFirst());
         db.update(TABLE_NAME02, cv, where, whereValue);
     }
     //修改病人信息
@@ -74,6 +74,7 @@ public class PatientTestDAO {
 
         ContentValues cv = new ContentValues();
         cv.put(PATIENT_SHPS, patienttest.getShps());
+        System.out.println("失败了？？？？？"+patienttest.getShps());
         db.update(TABLE_NAME02, cv, where, whereValue);
     }
 

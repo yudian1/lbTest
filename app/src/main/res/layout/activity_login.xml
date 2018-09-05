@@ -18,9 +18,17 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="只有认真填写信息 , 您的医生才会记得您"
+        android:textColor="@color/lightblue"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_margin="15dp"/>
     <ScrollView
         android:id="@+id/login_form"
+        android:paddingTop="@dimen/dp10"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -29,59 +37,165 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <android.support.design.widget.TextInputLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <AutoCompleteTextView
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                    android:layout_weight="1"
+                    android:text="住院号(ID)："
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:gravity="center"/>
                 <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
+                    android:id="@+id/email"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    tools:ignore="InvalidImeActionId" />
-
-            </android.support.design.widget.TextInputLayout>
-
+                    android:layout_weight="1"
+                    android:hint="@string/prompt_email"
+                    android:textSize="30sp"
+                    android:background="@drawable/target_input_bg"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="姓名(Name)："
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/prompt_name"
+                    android:textSize="30sp"
+                    android:background="@drawable/target_input_bg"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="性别(Sex)："
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/gender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/prompt_gender"
+                    android:textSize="30sp"
+                    android:background="@drawable/target_input_bg"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="年龄(Age)："
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/prompt_age"
+                    android:textSize="30sp"
+                    android:background="@drawable/target_input_bg"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="文化程度："
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/et_culture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="输入文化程度"
+                    android:textSize="30sp"
+                    android:background="@drawable/target_input_bg"/>
+                <Spinner
+                    android:id="@+id/culture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="30sp"
+                    android:visibility="gone"
+                    android:background="@drawable/target_input_bg"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="婚姻家庭状况："
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/et_marry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="输入婚姻家庭状况"
+                    android:textSize="30sp"
+                    android:background="@drawable/target_input_bg"/>
+                <Spinner
+                    android:id="@+id/marry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="30sp"
+                    android:visibility="gone"
+                    android:background="@drawable/target_input_bg"/>
+            </LinearLayout>
             <Button
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="60dp"
                 android:text="@string/action_sign_in"
+                android:textSize="30dp"
                 android:inputType="number"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/email_register_in_button"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/action_to_register"
-                android:textStyle="bold" />
 
             <AutoCompleteTextView
                 android:id="@+id/info"
@@ -89,12 +203,10 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="服务器返回信息："
+                android:visibility="gone"
                 />
-
         </LinearLayout>
 
     </ScrollView>
-
-
 </LinearLayout>
 

@@ -6,11 +6,7 @@ import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.ConnectivityManager;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.os.Handler;
 
@@ -18,37 +14,29 @@ import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.AsyncTask;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.text.TextUtils;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.inputmethod.EditorInfo;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lbtest.dao.PatientTestDAO;
-import com.example.lbtest.lb.DBASActivity;
 import com.example.lbtest.model.PatientTest;
 import com.example.lbtest.web.WebService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.Manifest.permission.READ_CONTACTS;
-
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity  implements LoaderCallbacks<Cursor> {
+public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
 
     private ProgressDialog dialog;
     private String info;
@@ -66,22 +54,33 @@ public class LoginActivity extends AppCompatActivity  implements LoaderCallbacks
      */
 
     // UI references.
-    private AutoCompleteTextView mEmailView;
+    private EditText mEmailView;
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private SharedPreferences sp;
+    private EditText name;
+    private EditText gender;
+    private EditText age;
+    private Spinner culture;
+    private Spinner marry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
+        mEmailView = (EditText) findViewById(R.id.email);
+        name = (EditText) findViewById(R.id.name);
+        gender = (EditText) findViewById(R.id.gender);
+        age = (EditText) findViewById(R.id.age);
+        culture = (Spinner) findViewById(R.id.culture);
+        marry = (Spinner) findViewById(R.id.marry);
         //populateAutoComplete();
 
         infotv = (TextView) findViewById(R.id.info);
-        mPasswordView = (EditText) findViewById(R.id.password);
-        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        //mPasswordView = (EditText) findViewById(R.id.password);
+      /*  mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
                 if (id == R.id.login || id == EditorInfo.IME_NULL) {
@@ -90,9 +89,9 @@ public class LoginActivity extends AppCompatActivity  implements LoaderCallbacks
                 }
                 return false;
             }
-        });
+        });*/
 
-        Button mEmailRegisterInButton = (Button) findViewById(R.id.email_register_in_button);
+       /* Button mEmailRegisterInButton = (Button) findViewById(R.id.email_register_in_button);
         if (mEmailRegisterInButton != null) {
             mEmailRegisterInButton.setOnClickListener(new OnClickListener() {
                 @Override
@@ -101,7 +100,7 @@ public class LoginActivity extends AppCompatActivity  implements LoaderCallbacks
                     startActivity(regItn);
                 }
             });
-        }
+        }*/
 
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
@@ -111,10 +110,15 @@ public class LoginActivity extends AppCompatActivity  implements LoaderCallbacks
                 public void onClick(View view) {
                     PatientTest patientTest = new PatientTest();
                     String strId =mEmailView.getText().toString();
-                    patientTest.setId(Integer.parseInt(strId));
-                    System.out.println("当前ID----" + Integer.parseInt(strId));
-                    PatientTestDAO ptdao = new PatientTestDAO(LoginActivity.this);
-                    ptdao.insert(patientTest);
+                    //patientTest.setId(Integer.parseInt(strId));
+//                    System.out.println("当前ID----" + Integer.parseInt(strId));
+                    sp = getSharedPreferences("config", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor edit = sp.edit();
+                    edit.putString("id", strId);
+                    // 提交edit
+                    edit.commit();
+                    /*PatientTestDAO ptdao = new PatientTestDAO(LoginActivity.this);
+                    ptdao.insert(patientTest);*/
                     Toast.makeText(LoginActivity.this, "新建用户成功！", Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
@@ -122,26 +126,19 @@ public class LoginActivity extends AppCompatActivity  implements LoaderCallbacks
                 }
             });
         }
-
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
-
    private void attemptLogin() {
-
         // Reset errors.
         mEmailView.setError(null);
-        mPasswordView.setError(null);
-
-
+        //mPasswordView.setError(null);
         new Thread(new MyThread()).start();
     }
-
-
     public class MyThread implements Runnable {
         @Override
         public void run() {
-            info = WebService.executeHttpGet("LogLet",mEmailView.getText().toString(), mPasswordView.getText().toString());
+            info = WebService.executeHttpGet("LogLet",mEmailView.getText().toString(), name.getText().toString());
             handler.post(new Runnable() {
                 @Override
                 public void run() {
@@ -187,7 +184,6 @@ public class LoginActivity extends AppCompatActivity  implements LoaderCallbacks
             mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
         }
     }
-
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         return new CursorLoader(this,
@@ -224,14 +220,12 @@ public class LoginActivity extends AppCompatActivity  implements LoaderCallbacks
 
     private void addEmailsToAutoComplete(List<String> emailAddressCollection) {
         //Create adapter to tell the AutoCompleteTextView what to show in its dropdown list.
-        ArrayAdapter<String> adapter =
+        /*ArrayAdapter<String> adapter =
                 new ArrayAdapter<>(LoginActivity.this,
                         android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
 
-        mEmailView.setAdapter(adapter);
+        mEmailView.setAdapter(adapter);*/
     }
-
-
     private interface ProfileQuery {
         String[] PROJECTION = {
                 ContactsContract.CommonDataKinds.Email.ADDRESS,
@@ -240,7 +234,5 @@ public class LoginActivity extends AppCompatActivity  implements LoaderCallbacks
 
         int ADDRESS = 0;
     }
-
-
 }
 

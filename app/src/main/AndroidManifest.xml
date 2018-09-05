@@ -15,19 +15,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".lb.SHPSActivity"></activity>
-        <activity android:name=".lb.FirstActivity"></activity>
-        <activity android:name=".lb.EvaluteSelfPSASActivity"></activity>
-        <activity android:name=".lb.DBASActivity"></activity>
-        <activity android:name=".MainActivity" ></activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".lb.FirstActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>

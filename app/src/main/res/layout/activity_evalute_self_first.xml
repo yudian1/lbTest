@@ -2,11 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/cardview_dark_background">
-
+    android:background="@color/lightblue"
+    android:orientation="vertical">
+<!--
     <RelativeLayout
-        style="@style/page_title"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="@mipmap/background"
         android:id="@+id/heading"
         android:layout_width="fill_parent" >
         
@@ -23,36 +25,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="FIRST评估"
+            android:text="量表评估"
             />
-    </RelativeLayout>
+    </RelativeLayout>-->
 
     <RelativeLayout 
-    android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:layout_below="@id/heading"
-    android:id="@+id/relativeLayout">
-    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+
+        android:id="@+id/relativeLayout">
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="start"
-        android:textColor="@color/orange"
-        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         android:layout_margin="10dp"
         android:drawableRight="@mipmap/arrow_right1"
-        android:text="当您躺在床上试着入睡时，下列感觉的程度一般来说有多强烈？请选择一个最符合您感觉的答案。"/>
+        android:lineSpacingMultiplier="1.5"
+        android:text="以下列出了有些人可能有的病痛或问题，请仔细阅读每一条，根据最近一周（或过去一段时间），选择对应的数值。"/>
 </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-    <RelativeLayout 
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
    		android:layout_height="match_parent"
-   		android:visibility="gone"
-   		android:id="@+id/relativeLayout2">
-         
+   		android:id="@+id/relativeLayout2"
+        android:visibility="gone"
+        >
+
     <RelativeLayout 
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -69,7 +76,111 @@
                   android:text="倒计时"
                   android:layout_marginTop="10dp"
                   android:layout_marginLeft="5dp"
-                  android:textStyle="bold" />
+                  android:textStyle="bold"
+                  android:visibility="gone"/>
+
+        <TextView 
+                  android:id="@+id/questiontitle"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingTop="30dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:textSize="40sp"
+                  android:textColor="@color/white"
+        	      android:layout_centerHorizontal="true"
+                  android:text="1、感觉心脏快速、剧烈或不规则的跳动。"/>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questiontitle"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:stretchColumns="*">
+
+            <RadioButton
+                android:id="@+id/button00"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@drawable/radio"
+                android:button="@null"
+                android:gravity="center"
+                android:text="从不"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <RadioButton
+                android:id="@+id/button01"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@drawable/radio"
+                android:button="@null"
+                android:gravity="center"
+                android:text="偶尔"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <RadioButton
+                android:id="@+id/button02"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@drawable/radio"
+                android:button="@null"
+                android:gravity="center"
+                android:text="有时"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <RadioButton
+                android:id="@+id/button03"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@drawable/radio"
+                android:button="@null"
+                android:gravity="center"
+                android:text="常常"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <RadioButton
+                android:id="@+id/button04"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@drawable/radio"
+                android:button="@null"
+                android:gravity="center"
+                android:text="总是"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+        <!--<TextView
+            android:id="@+id/myTime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_below="@id/linearLayout"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black_50"
+            android:text="点击重新播放→"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold" />
         <ImageView
             android:id="@+id/play"
             android:layout_width="30dp"
@@ -79,101 +190,29 @@
             android:layout_marginRight="5dp"
             android:layout_centerHorizontal="true"
             android:src="@mipmap/play"
-            android:layout_toRightOf="@id/myTime" />
-        <TextView 
-                  android:id="@+id/questiontitle"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_marginLeft="5dp"
-                  android:layout_marginRight="5dp"
-                  android:textSize="18sp"
-        	      android:textColor="@color/lightblue"
-        	      android:layout_centerHorizontal="true"
-        	      android:layout_below="@id/myTime"
-                  android:text="1、感觉心脏快速、剧烈或不规则的跳动。"/>
-        <RadioGroup 
-                 android:id="@+id/radiogroup"
-            	 android:layout_width="wrap_content"
-            	 android:layout_height="wrap_content"
-            	 android:layout_below="@id/questiontitle"
-            	 android:paddingTop="10dp"
-            	 android:layout_marginLeft="5dp"
-                 android:orientation="vertical"
-                 android:stretchColumns="*">
-            <RadioButton
-                android:id="@+id/button00"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:textSize="15sp"
-                android:textColor="@color/white"
-                android:layout_weight="1"
-                android:text="从不"/>
-          <RadioButton 
-                android:id="@+id/button01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:textSize="15sp"   
-                android:textColor="@color/white"
-                android:layout_weight="1"
-                android:text="偶尔"/>
-         <RadioButton  
-                android:id="@+id/button02"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:textSize="15sp"   
-                android:textColor="@color/white"
-                android:gravity="center" 
-                android:layout_weight="1"
-                android:text="有时"/>
-         <RadioButton  
-                android:id="@+id/button03"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:textSize="15sp"   
-                android:textColor="@color/white"
-                android:gravity="center" 
-                android:layout_weight="1"
-                android:text="常常"/>
-         <RadioButton  
-                android:id="@+id/button04"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:textSize="15sp"   
-                android:textColor="@color/white"
-                android:gravity="center" 
-                android:layout_weight="1"
-                android:text="总是"/>
-
-      </RadioGroup>
-
-    </RelativeLayout>
-
+            android:layout_below="@id/linearLayout"
+            android:layout_toRightOf="@id/myTime2" />-->
     <Button 
         android:id="@+id/nextbutton"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:layout_below="@id/linearLayout"
         android:layout_alignParentRight="true"
         android:textColor="@android:color/white"
         android:layout_marginRight="10dp"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:background="@drawable/target_btn_bg"
         android:layout_marginBottom="10dp"
         android:text="下一题"/>
 	<Button 
         android:id="@+id/resultbutton"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:layout_below="@id/linearLayout"
         android:layout_alignParentRight="true"
         android:textColor="@android:color/white"
         android:visibility="invisible"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:background="@drawable/target_btn_bg"
         android:layout_marginRight="10dp"
         android:text="确定"/>
@@ -183,38 +222,44 @@
        	android:layout_height="wrap_content"
        	android:layout_centerInParent="true"
        	android:visibility="invisible"
-       	android:textColor="@color/lightblue"
+        android:textColor="@color/white"
        	android:textSize="20dp"
-        android:text=""/>
-    
+        android:text="已完成"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp20"
+            android:layout_below="@id/resultbutton"
+            android:id="@+id/relativeLayout3">
+            <Button
+                android:id="@+id/play"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:text="重新播放"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 </RelativeLayout>
     </ScrollView>
-   <!-- <LinearLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/linear"
-        android:visibility="gone">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:text="备注："
-            android:textColor="@color/lightblue"
-            android:textSize="20sp"/>
-        <EditText
-            android:id="@+id/edit_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:maxLines="3"/>
-        <Button
-            android:id="@+id/submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="提交"
-            android:textColor="@color/orange"
-            android:background="@color/cardview_light_background"/>
-    </LinearLayout>
--->
+        android:layout_height="0dp"
+        android:text="haha"
+        android:layout_weight="1"
+        android:visibility="invisible"/>
+    <ProgressBar
+        android:max="76"
+        android:progress="0"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/progressBarHorizontal"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:visibility="invisible"
+        android:layout_height="20dp"
+        />
 </LinearLayout>

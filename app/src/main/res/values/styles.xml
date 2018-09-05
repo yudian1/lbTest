@@ -12,8 +12,12 @@
         <item name="android:layout_height">@dimen/page_title_height</item>
         <item name="android:background">@mipmap/background</item>
     </style>
+    <style name="page_title2">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:background">@mipmap/background</item>
+    </style>
     <style name="button_style">
-        <item name="android:textSize">@dimen/text_size_15</item>
+        <item name="android:textSize">30dp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:background">@null</item>
     </style>
@@ -22,7 +26,7 @@
         <item name="android:paddingRight">5dip</item>
     </style>
     <style name="page_title_str">
-        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textSize">30dp</item>
         <item name="android:textColor">@color/title_str_color</item>
     </style>
 

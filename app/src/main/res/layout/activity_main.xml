@@ -1,66 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/cardview_dark_background" >
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/lightblue"
+    tools:context="com.example.lbtest.MainActivity">
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="盛安莱宝"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:layout_margin="10dp"
+        android:background="@drawable/big_border"
         android:gravity="center"
-        android:textColor="@color/lightblue"
-        android:textSize="30sp"/>
+        android:text="陆军军医大学大坪医院心理健康问卷"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:paddingTop="@dimen/dp20"
+        android:id="@+id/relativeLayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dp20"
+            android:layout_centerInParent="true"
+            android:gravity="start"
+            android:textColor="@color/black_50"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:lineSpacingMultiplier="1.5"
+            android:text="为了更好的了解您的心理状况，维护您的心理健康，欢迎您进行本次心理评估。为了保证评估的准确性，请注意以下几点："/>
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/btn_dbas"
-            android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="5dp"
+        android:orientation="vertical"
+        android:id="@+id/relativeLayout2">
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/COURSE_BG_ITEM"
-            android:text="睡眠个人信念与态度量表（DBAS）"
-            android:layout_margin="5dp"
-            android:textSize="20sp"
-            android:textColor="@color/whitesmoke"/>
-        <Button
-            android:id="@+id/btn_psas"
-            android:layout_width="match_parent"
+            android:paddingTop="@dimen/dp10"
+            android:layout_centerInParent="true"
+            android:gravity="start"
+            android:textColor="@color/black_50"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:text="1、本次评估需要留下您的个人基本信息，我们对您的相关信息会严格保密。"/>
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@color/COURSE_BG_ITEM"
-            android:text="入睡前觉醒量表（PSAS）"
-            android:textSize="20sp"
-            android:textColor="@color/whitesmoke"/>
-        <Button
-            android:id="@+id/btn_first"
-            android:layout_width="match_parent"
+            android:paddingTop="@dimen/dp10"
+            android:layout_centerInParent="true"
+            android:gravity="start"
+            android:textColor="@color/black_50"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:text="2、回答没有对错好坏之分，如实作答即可。"/>
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@color/COURSE_BG_ITEM"
-            android:text="福特应激的失眠反应测验（FIRST）"
-            android:textSize="20sp"
-            android:textColor="@color/whitesmoke"/>
-        <Button
-            android:id="@+id/btn_shps"
-            android:layout_width="match_parent"
+            android:paddingTop="@dimen/dp10"
+            android:layout_centerInParent="true"
+            android:gravity="start"
+            android:textColor="@color/black_50"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:text="3、本次评估无时间限制，可凭第一印象作答。"/>
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@color/COURSE_BG_ITEM"
-            android:text="睡眠卫生知识及行为量表（SHPS）"
-            android:textSize="20sp"
-            android:textColor="@color/whitesmoke"/>
-        <Button
-            android:id="@+id/set"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@color/COURSE_BG_ITEM"
-            android:text="设置"
-            android:textSize="20sp"
-            android:textColor="@color/whitesmoke"/>
+            android:paddingTop="@dimen/dp10"
+            android:layout_centerInParent="true"
+            android:gravity="start"
+            android:textColor="@color/black_50"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:text="4、请务必回答每个问题，不要遗漏。"/>
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:paddingTop="@dimen/dp20"
+        android:id="@+id/relativeLayout3">
+        <Button
+            android:id="@+id/start_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:text="开始"
+            android:textSize="35dp"
+            android:textColor="@color/white"
+            android:inputType="number"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
 </LinearLayout>
